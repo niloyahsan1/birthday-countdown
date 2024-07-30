@@ -1,0 +1,141 @@
+/* Base */
+* {
+    box-sizing: border-box;
+}
+
+#name {
+    color: #a6ca07;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+#name:hover {
+    color: #07bdca;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    background-image: url(../image/bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center center;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+h1 {
+    margin-top: -20rem;
+    font-size: 5rem;
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 700;
+    -webkit-text-stroke: 2px black;
+}
+
+.countdown-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.text {
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0 2rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.countdown-box {
+    text-align: center;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    color: #07bdca;
+    font-size: 20px;
+}
+
+.countdown-box:hover {
+    transform: translateY(-10px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 4rem;
+        margin-top: -15rem;
+    }
+
+    .text {
+        font-size: 5rem;
+        margin: 0 1.5rem;
+    }
+
+    .countdown-container {
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .countdown-box {
+        font-size: 18px;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3rem;
+        margin-top: -10rem;
+    }
+
+    .text {
+        font-size: 4rem;
+        margin: 0 1rem;
+    }
+
+    .countdown-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .countdown-box {
+        font-size: 16px;
+        padding: 0.6rem 1rem;
+    }
+}
