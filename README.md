@@ -1,5 +1,5 @@
-# birthdaycountdown
-From now on no more Excuses!
+# Birthday Countdown
 
-# Live Website Link
-https://iamraufu.github.io/birthdaycountdown/
+No chance to forget, no chance to make Excuses!
+
+-   Live Website Link: https://iamraufu.github.io/birthdaycountdown/
